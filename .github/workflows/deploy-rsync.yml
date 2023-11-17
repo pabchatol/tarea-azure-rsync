@@ -1,4 +1,14 @@
+name: despliega a Azure
+
+on: [push]
+
 jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+    - name: probando
+      run: echo ${{ secrets.USERNAME }}
+
   deploy:
     runs-on: ubuntu-latest
     steps:
