@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: probando
-      run: echo ${{ secrets.USERNAME }}
+      run: echo ${{ secrets.KEY }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -17,9 +17,7 @@ jobs:
       uses: burnett01/rsync-deployments@6.0.0
       with:
         switches: -avzr --delete
-        path: tarea-azure-rsync/
         remote_path: ${{ secrets.PATH }}
         remote_host: ${{ secrets.HOST }}
-        remote_port: ${{ secrets.PORT }}
         remote_user: ${{ secrets.USER }}
         remote_key: ${{ secrets.KEY }}
