@@ -18,6 +18,6 @@ jobs:
       env:
         HOST: ${{ secrets.HOST }}
         USER: ${{ secrets.USER }}
-        KEY: ${{ secrets.KEY }}
+        PASSWORD: ${{ secrets.PASSWORD }}
         TARGET: /home/PabloVM
         ARGS_MORE: --no-perms -u
