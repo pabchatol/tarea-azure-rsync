@@ -14,11 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: rsync deployments
-      uses: burnett01/rsync-deployments@6.0.0
-      with:
-        switches: -avzr --delete
-        path: ./
-        remote_path: ${{ secrets.PATH }}
-        remote_host: ${{ secrets.HOST }}
-        remote_user: ${{ secrets.USER }}
-        remote_key: ${{ secrets.KEY }}
+      uses: up9cloud/action-rsync@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USER: ${{ secrets.USER }}
+        KEY: ${{ secrets.KEY }}
+        TARGET: /home/PabloVM
+        ARGS_MORE: --no-perms -u
