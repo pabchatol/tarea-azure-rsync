@@ -19,5 +19,5 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USER: ${{ secrets.USER }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        TARGET: /home/PabloVM
+        TARGET: /home/PabloVM/container-folder
         ARGS_MORE: --no-perms -u
