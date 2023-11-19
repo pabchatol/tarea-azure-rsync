@@ -19,5 +19,5 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USER: ${{ secrets.USER }}
         KEY: ${{ secrets.KEY }}
-        TARGET: /home/PabloVM/container-folder
+        TARGET: /home/PabloCH/container-folder
         ARGS_MORE: --no-perms -u
